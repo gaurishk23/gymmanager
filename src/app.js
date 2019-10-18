@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './reducers/reducer'
 import { Provider } from 'react-redux';
-import RegisterMember from './components/RegisterMember';
+import AppRouter from './router/AppRouter';
 
 
 configureStore.subscribe(()=>{
@@ -24,6 +24,6 @@ configureStore.dispatch({ type: 'UPDATE_MEMBER',
 
 
 ReactDOM.render(<Provider store={configureStore}>
-    <RegisterMember />
+    <AppRouter />
 </Provider>, document.getElementById('app'));
 
